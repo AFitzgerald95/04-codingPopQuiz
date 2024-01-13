@@ -137,7 +137,7 @@ function handleChoice(event) {
             clearInterval(timer);
             endQuiz();
 
-            var initials = document.getElementById('initials').ariaValueMax;
+            var initials = document.getElementById('initials').value;
             saveScore(initials, time);
             }, 1000);
         }
@@ -160,7 +160,7 @@ function displayFeedback(message) {
 
 function endQuiz() {
     clearInterval(timer);
-    isQuizOver = true;
+    isQuizOver = false;
     questionScreenEl.style.display = "none";
     endScreenEl.style.display = "block";
     finalScoreEl.textContent = time;
